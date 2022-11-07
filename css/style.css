@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+
+nav a {
+    color: rgb(41, 204, 204);
+    text-decoration: none;
+}
+
+.bigMax{
+    max-width: 20rem;
+}

@@ -1,0 +1,26 @@
+img {
+    max-height: 120px;
+    border-radius: 13px;
+}
+
+body {
+    background-color: rgb(95, 172, 95);
+    font-family: sans-serif;
+    border: 1rem solid orange;
+    border-radius: 13px;
+}
+
+header{
+    background-image: linear-gradient(rgb(162, 255, 0), rgb(95, 172, 95));
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    background-color: green;
+    border-radius: 13px;
+}
+
+audio{
+    background-color: green;
+    max-height: 2rem;
+    border: 10px solid green;
+}
