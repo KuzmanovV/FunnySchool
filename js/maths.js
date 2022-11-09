@@ -12,8 +12,8 @@ function incrementSeconds() {
 
 eStartButton.disabled = false;
 eStartButton.addEventListener("click", start);
-function start() {
-  ev.preventDefault();
+function start(ev) {
+  ev.preventDefault(ev);
   eStartButton.disabled = true;
   utils.sound("../audio/tap.mp3");
   utils.sound("../audio/Clock-ticking.mp3");
