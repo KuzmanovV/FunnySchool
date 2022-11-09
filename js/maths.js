@@ -40,7 +40,6 @@ function start(ev) {
     eSecondNumber.value = utils.getRandomInt(minNumber, maxNumber);
   }
 }
-
 document.querySelector(".submit").addEventListener("click", submit);
 function submit() {
   utils.sound("../audio/tap.mp3");
