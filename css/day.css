@@ -12,10 +12,6 @@ nav a {
     text-decoration: none;
 }
 
-.controls {
-    /* max-height: 55px; */
-}
-
 th {
     text-align: left;
 }
@@ -23,7 +19,7 @@ th {
 table {
     background: rgb(202, 242, 3);
     margin: auto;
-    border-spacing: 20px 2px;
+    border-spacing: 15px 0;
     color: green;
 }
 
