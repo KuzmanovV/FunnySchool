@@ -18,6 +18,14 @@ audio{
     border: 10px solid green;
 }
 
-.songs{
-    text-align: center;
+label{
+    font-size: 2rem;
+    color: greenyellow;
 }
+
+.song{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
