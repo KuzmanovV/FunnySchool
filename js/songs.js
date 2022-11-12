@@ -1,4 +1,5 @@
-import {html, render} from 'https://unpkg.com/lit-html?module';
+import {html} from 'https://unpkg.com/lit-html?module';
+import renderFunction from './moduls/renderFunction.js';
 
 const songTemplate = (data) => html`
 <div class="song">
@@ -13,11 +14,5 @@ const songTemplate = (data) => html`
 
 const placeClass = '.songs';
 const dataWay = '../data/songs.json';
-async function renderFunction (placeClass, dataWay){
-    const place = document.querySelector(placeClass);
-    const data = await(await fetch(dataWay)).json();
-    const result = data.map(songTemplate);
-    render(result, place);
-};
 
-renderFunction(placeClass, dataWay);
+renderFunction(placeClass, dataWay, songTemplate);
