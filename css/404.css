@@ -8,8 +8,12 @@ img{
 }
 
 nav a {
-    color: aqua;
+    color: grey;
     text-decoration: none;
+}
+
+.active{
+    color: aqua;
 }
 
 em{
