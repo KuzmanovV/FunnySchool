@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Врабчета",
+        "song": "../data/songs/Врабчета.mp3",
+        "type": "audio/mp3"
+    },
+    {
+        "title": "Дим да ме няма",
+        "song": "../data/songs/Дим.mp3",
+            "type": "audio/mp3"
+    },
+    {
+        "title": "Две праскови",
+        "song": "../data/songs/Наследство.mp3",
+        "type": "audio/mp3"
+    },
+    {
+        "title": "Приятели",
+        "song": "../data/songs/Още малко.mp3",
+        "type": "audio/mp3"
+    },
+    {
+        "title": "Чорвави глави",
+        "song": "../data/songs/По-полека.mp3",
+        "type": "audio/mp3"
+    },
+    {
+        "title": "Поморие",
+        "song": "../data/songs/Поморие.mp3",
+        "type": "audio/mp3"
+    }
+]

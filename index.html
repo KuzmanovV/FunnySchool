@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funny School</title>
     <script src="../js/maths.js" type="module"></script>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/x-icon" href="../img/icons8-pencil-drawing-48.png">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../img/icons8-pencil-drawing-48.png"
+    />
+  </head>
+  <body>
     <header>
-        <div>
-            <img src="../img/Max.jpg" alt="MaxsImg">
-            <div class="explanationText">
-                <h1>Max's Maths - 1st grade</h1>
-                <p>Press <span>START</span> in order to start the game. Press <span>READY</span> when ready.</p>
-                <p>If some of the tasks is solved wrong you will be notified and you will be able to find out and correct your mistake.</p>
-                <p>When you solve correctly all the tasks the timer will stop and you will unlock your media - songs, films, photos, comics. Good luck!</p>
-            </div>
-            <img src="../img/Max.jpg" alt="MaxsImg">
+      <div>
+        <img src="../img/Max.jpg" alt="MaxsImg" />
+        <div class="explanationText">
+          <h1>Max's Maths - 1st grade</h1>
+          <p>
+            Press <span>START</span> in order to start the game. Press
+            <span>READY</span> when ready.
+          </p>
+          <p>
+            If some of the tasks is solved wrong you will be notified and you
+            will be able to find out and correct your mistake.
+          </p>
+          <p>
+            When you solve correctly all the tasks the timer will stop and you
+            will unlock your media - songs, films, photos, comics. Good luck!
+          </p>
         </div>
-        <nav>
-            <a href="./html/404.html">Photos</a>
-            <a href="./html/songs.html">Songs</a>
-            <a id="programLink" href="./html/day.html">Day</a>
-            <a href="./html/404.html">Films</a>
-            <a href="./html/404.html">Comics</a>
-        </nav>
+        <img src="../img/Max.jpg" alt="MaxsImg" />
+      </div>
+      <nav>
+        <a href="./html/404.html">Photos</a>
+        <a href="./html/songs.html">Songs</a>
+        <a id="programLink" href="./html/day.html">Day</a>
+        <a href="./html/404.html">Films</a>
+        <a href="./html/404.html">Comics</a>
+      </nav>
     </header>
-        
-    <div class="controls">
+    <main>
+      <div class="controls">
         <div class="timer">
-            <p>Your timer will appear here...</p>
+          <p>Your timer will appear here...</p>
         </div>
         <form>
-            <label>Min number?</label>
-            <input class="minNumInput control" type="number" value="0">
-            <label>Max number?</label>
-            <input class="maxNumInput control" type="number" value="10">
-            <label>Number of tasks?</label>
-            <input class="controlInput control" type="number" value="4">
-            <label>seconds</label>
-            <button class="start" disabled>START</button>
+          <label>Min number?</label>
+          <input class="minNumInput control" type="number" value="0" />
+          <label>Max number?</label>
+          <input class="maxNumInput control" type="number" value="10" />
+          <label>Number of tasks?</label>
+          <input class="controlInput control" type="number" value="4" />
+          <label>seconds</label>
+          <button class="start" disabled>START</button>
         </form>
-    </div>
+      </div>
 
-    <form class="tasks">
-    </form>
-
+      <form class="tasks"></form>
+    </main>
     <footer>
-        <p class="mistake">
-            WRONG! You have one or more mistakes! Check, correct and try again ;)
-        </p>
-        <input class="submit" type="submit" value="READY!">
-        <button class="restart">RESTART</button>
-        <a class="developed" href="#">
-            Developed by V. Kuzmanov
-        </a>
+      <p class="mistake">
+        WRONG! You have one or more mistakes! Check, correct and try again ;)
+      </p>
+      <input class="submit" type="submit" value="READY!" />
+      <button class="restart">RESTART</button>
+      <a class="developed" href="#"> Developed by V. Kuzmanov </a>
     </footer>
-</body>
+  </body>
 </html>
