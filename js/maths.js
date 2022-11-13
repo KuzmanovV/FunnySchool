@@ -15,8 +15,8 @@ eStartButton.addEventListener("click", start);
 function start(ev) {
   ev.preventDefault(ev);
   eStartButton.disabled = true;
-  utils.sound("../audio/tap.mp3");
-  utils.sound("../audio/Clock-ticking.mp3");
+  utils.sound("../static/audio/tap.mp3");
+  utils.sound("../static/audio/Clock-ticking.mp3");
 
   setInterval(incrementSeconds, 1000);
 
@@ -42,7 +42,7 @@ function start(ev) {
 }
 document.querySelector(".submit").addEventListener("click", submit);
 function submit() {
-  utils.sound("../audio/tap.mp3");
+  utils.sound("../static/audio/tap.mp3");
   let readyFlag = true;
   let checkedFlag = false;
   let rowsNumber = document.querySelector(".controlInput").value;
@@ -80,21 +80,21 @@ function submit() {
     document.querySelector(".timer p").style.setProperty("font-size", "50px");
 
     document.querySelector(".mistake").remove();
-    utils.sound("../audio/success.mp3");
+    utils.sound("../static/audio/success.mp3");
 
     for (let i = 0; i < rowsNumber; i++) {
       document.querySelector(".task").remove();
     }
   } else {
     document.querySelector(".mistake").style.setProperty("display", "block");
-    utils.sound("../audio/Wrong Clakson Sound Effect.mp3");
+    utils.sound("../static/audio/Wrong Clakson Sound Effect.mp3");
   }
 }
 
 let restarter = document
   .querySelector(".restart")
   .addEventListener("click", restart);
-utils.sound("../audio/tap.mp3");
+utils.sound("../static/audio/tap.mp3");
 function restart() {
   location.reload();
 }

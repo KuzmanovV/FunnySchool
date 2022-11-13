@@ -12,7 +12,4 @@ const songTemplate = (data) => html`
         </audio>
       </div>`;
 
-const placeClass = '.songs';
-const dataWay = '../data/songs.json';
-
-renderFunction(placeClass, dataWay, songTemplate);
+renderFunction('.songs', '../data/songs.json', songTemplate);
