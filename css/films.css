@@ -1,0 +1,27 @@
+h1 {
+    font-size: 15px;
+    color: rgb(142, 92, 1);
+}
+
+img {
+    max-height: 50px;
+}
+
+nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.film a{
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.film{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+
