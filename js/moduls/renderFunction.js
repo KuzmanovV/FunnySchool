@@ -1,4 +1,4 @@
-import {render} from 'https://unpkg.com/lit-html?module';
+import {render} from '../../node_modules/lit-html/lit-html.js';
 
 export default async function renderFunction (placeClass, dataWay, songTemplate){
         const place = document.querySelector(placeClass);

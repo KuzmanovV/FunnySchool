@@ -1,0 +1,23 @@
+{
+  "name": "funnyschool",
+  "version": "1.0.0",
+  "description": "An app for my son to practice arithmetics like a funny play and to use the pc not only for gaming.\r A simple app with several pages made with JS, HTML and CSS.\r You can run it localy using live server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuzmanovV/FunnySchool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuzmanovV/FunnySchool/issues"
+  },
+  "homepage": "https://github.com/KuzmanovV/FunnySchool#readme",
+  "dependencies": {
+    "lit-html": "^2.4.0"
+  }
+}
