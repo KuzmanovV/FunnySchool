@@ -21,7 +21,11 @@ nav a {
     font-size: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 15px;
+}
+
+.snap{
+    margin: 0 23px;
 }
 
