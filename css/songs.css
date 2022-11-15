@@ -16,16 +16,18 @@ audio{
     background-color: green;
     max-height: 2rem;
     border: 10px solid green;
+    border-radius: 15px;
 }
 
 label{
     font-size: 2rem;
     color: greenyellow;
+    margin-right: 2rem;
 }
 
 .song{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 

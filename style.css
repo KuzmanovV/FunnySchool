@@ -25,12 +25,12 @@ nav {
     margin-bottom: 0.1rem;
 }
 
-#programLink{
+.activePage {
     color: aqua;
     text-decoration: none;
 }
 
-#programLink:hover{
+#programLink:hover {
     color: blue;
 }
 
@@ -39,7 +39,7 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: blue;
 }
 
@@ -54,7 +54,7 @@ nav a:hover{
     background-color: azure;
 }
 
-.result{
+.result {
     width: 4rem;
 }
 
@@ -65,15 +65,16 @@ nav a:hover{
     padding: 1rem;
 }
 
-footer{
+footer {
     text-align: center;
 }
 
-footer button{
+footer button {
     color: red;
 }
 
-footer button, footer input{
+footer button,
+footer input {
     margin: 10px;
 }
 
@@ -101,7 +102,7 @@ footer button, footer input{
     margin-block-end: 0px;
 }
 
-h1{
+h1 {
     color: green;
 }
 
@@ -114,7 +115,7 @@ h1{
     text-align: right;
 }
 
-label{
+label {
     color: green;
 
 }
@@ -125,55 +126,53 @@ label{
 }
 
 button,
-.submit,
-span {
+.submit {
     height: 2rem;
     cursor: pointer;
     color: blue;
     font-weight: bold;
 }
 
-.submit{
+span {
+    color: blue;
+}
+
+.submit {
     height: 4rem;
     width: 10rem;
     border: 5px solid green;
     border-radius: 15 px;
 }
 
-input:hover{
+input:hover {
     background-color: rgb(34, 236, 34);
     font-size: 20px;
     border-radius: 10px;
 }
 
-.restart:hover{
+.restart:hover {
     background-color: rgb(34, 236, 34);
     border-radius: 10px;
 }
 
-.mistake{
+.mistake {
     color: red;
     background-color: #fff;
     font-size: 2rem;
     display: none;
 }
 
-.start:hover{
+.start:hover {
     border: 5px solid green;
     border-radius: 5px;
 }
 
-.restart{
+.restart {
     margin-left: auto;
-   margin-right: auto;
+    margin-right: auto;
     display: block;
 }
 
-.developed{
+.developed {
     font-size: 8px;
 }
-
-
-
-
-

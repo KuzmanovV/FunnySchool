@@ -17,6 +17,11 @@ nav a {
     text-decoration: none;
 }
 
+.film a:hover{
+    font-size: 3rem;
+    color: aqua;
+}
+
 .film{
     font-size: 2rem;
     display: flex;

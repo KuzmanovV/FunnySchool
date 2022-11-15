@@ -78,6 +78,11 @@ function submit() {
     document.querySelector(".timer p").style.setProperty("color", "green");
     document.querySelector(".timer p").style.setProperty("font-weight", "800");
     document.querySelector(".timer p").style.setProperty("font-size", "50px");
+    document.querySelectorAll("nav a").forEach(e => {e.style.setProperty("color", "rgb(0, 238, 255)")});
+    document.querySelector('nav :nth-child(1)').setAttribute('href', "./html/404.html");
+    document.querySelector('nav :nth-child(2)').setAttribute('href', "./html/songs.html");
+    document.querySelector('nav :nth-child(4)').setAttribute('href', "./html/films.html");
+    document.querySelector('nav :nth-child(5)').setAttribute('href', "./html/404.html");
 
     document.querySelector(".mistake").remove();
     utils.sound("../static/audio/success.mp3");
@@ -91,8 +96,7 @@ function submit() {
   }
 }
 
-let restarter = document
-  .querySelector(".restart")
+document.querySelector(".restart")
   .addEventListener("click", restart);
 utils.sound("../static/audio/tap.mp3");
 function restart() {
