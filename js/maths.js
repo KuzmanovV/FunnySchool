@@ -74,7 +74,7 @@ function submit() {
     scroll(0, 0);
     document
       .querySelector(".timer")
-      .appendChild(utils.e("p", {}, `You MADE IT in ${seconds} seconds!!!`));
+      .appendChild(utils.el("p", {}, `You MADE IT in ${seconds} seconds!!!`));
     document.querySelector(".timer p").style.setProperty("color", "green");
     document.querySelector(".timer p").style.setProperty("font-weight", "800");
     document.querySelector(".timer p").style.setProperty("font-size", "50px");

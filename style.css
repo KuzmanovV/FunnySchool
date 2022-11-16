@@ -59,7 +59,6 @@ nav a:hover {
 }
 
 .controls {
-    background-color: rgb(0, 238, 255);
     background-image: linear-gradient(rgb(95, 172, 95), rgb(162, 255, 0));
     text-align: center;
     padding: 1rem;
@@ -113,6 +112,7 @@ h1 {
 .control {
     max-width: 3rem;
     text-align: right;
+    margin-bottom: 0.5rem;
 }
 
 label {
@@ -141,7 +141,7 @@ span {
     height: 4rem;
     width: 10rem;
     border: 5px solid green;
-    border-radius: 15 px;
+    border-radius: 15px;
 }
 
 input:hover {
