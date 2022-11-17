@@ -16,13 +16,7 @@ function el(type, attr, ...content) {
     return element;
   }
 
-function sound(audioFile) {
-    const audio = new Audio(audioFile);
-    audio.play();
-}
-
 export{
     getRandomInt,
     el,
-    sound,
 }
