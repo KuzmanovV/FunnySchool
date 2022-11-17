@@ -12,16 +12,15 @@ function sound(audioFile) {
   audio.play();
 }
 
-const audio = new Audio("../static/audio/Clock-ticking.mp3");
 const eStartButton = document.querySelector(".start");
 eStartButton.disabled = false;
 eStartButton.addEventListener("click", start);
+const tickingSound = new Audio("../static/audio/Clock-ticking.mp3");
 function start(ev) {
   ev.preventDefault();
   eStartButton.disabled = true;
   sound("../static/audio/tap.mp3");
-  audio.play();
-
+  tickingSound.play();
   setInterval(incrementSeconds, 1000);
 
   let rowsNumber = document.querySelector(".controlInput").value;
@@ -48,8 +47,7 @@ function start(ev) {
 document.querySelector(".submit").addEventListener("click", submit);
 function submit() {
   sound("../static/audio/tap.mp3");
-  let readyFlag = true;
-  let checkedFlag = false;
+  let correctFlag = true;
   let rowsNumber = document.querySelector(".controlInput").value;
 
   for (let i = 0; i < rowsNumber; i++) {
@@ -61,21 +59,19 @@ function submit() {
     );
     let result = Number(document.querySelectorAll(".result")[i].value);
 
-    checkedFlag = true;
-
     if ((i + 1) % 2 != 0) {
       if (firstNumber + secondNumber != result) {
-        readyFlag = false;
+        correctFlag = false;
       }
     } else {
       if (firstNumber - secondNumber != result) {
-        readyFlag = false;
+        correctFlag = false;
       }
     }
   }
 
-  if (readyFlag && checkedFlag) {
-    audio.pause();
+  if (correctFlag) {
+    tickingSound.pause();
     sound("../static/audio/success.mp3");
     eTimer.remove();
     document.querySelector(".mistake").remove();
@@ -86,10 +82,11 @@ function submit() {
 
     document
       .querySelector(".timer")
-      .appendChild(utils.el("p", {}, `You MADE IT in ${seconds} seconds!!!`));
+      .appendChild(utils.el("p", {color: 'green', 'font-weight': '800', 'font-size': '50px'}, `You MADE IT in ${seconds} seconds!!!`));
     document.querySelector(".timer p").style.setProperty("color", "green");
     document.querySelector(".timer p").style.setProperty("font-weight", "800");
     document.querySelector(".timer p").style.setProperty("font-size", "50px");
+    
     document.querySelectorAll("nav a").forEach(e => {e.style.setProperty("color", "rgb(0, 238, 255)")});
     document.querySelector('nav :nth-child(1)').setAttribute('href', "./html/404.html");
     document.querySelector('nav :nth-child(2)').setAttribute('href', "./html/songs.html");
@@ -101,8 +98,7 @@ function submit() {
   }
 }
 
-document.querySelector(".restart")
-  .addEventListener("click", restart);
+document.querySelector(".restart").addEventListener("click", restart);
 sound("../static/audio/tap.mp3");
 function restart() {
   location.reload();
