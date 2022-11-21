@@ -88,10 +88,10 @@ function submit() {
     document.querySelector(".timer p").style.setProperty("font-size", "50px");
     
     document.querySelectorAll("nav a").forEach(e => {e.style.setProperty("color", "rgb(0, 238, 255)")});
-    document.querySelector('nav :nth-child(1)').setAttribute('href', "./html/404.html");
-    document.querySelector('nav :nth-child(2)').setAttribute('href', "./html/songs.html");
-    document.querySelector('nav :nth-child(4)').setAttribute('href', "./html/films.html");
-    document.querySelector('nav :nth-child(5)').setAttribute('href', "./html/404.html");
+    document.querySelector('ul :nth-child(1) a').setAttribute('href', "./html/404.html");
+    document.querySelector('ul :nth-child(2) a').setAttribute('href', "./html/songs.html");
+    document.querySelector('ul :nth-child(4) a').setAttribute('href', "./html/films.html");
+    document.querySelector('ul :nth-child(5) a').setAttribute('href', "./html/404.html");
   } else {
     document.querySelector(".mistake").style.setProperty("display", "block");
     sound("../static/audio/Wrong Clakson Sound Effect.mp3");

@@ -19,10 +19,12 @@ header div {
     border-radius: 13px;
 }
 
-nav {
+ul {
+    list-style: none;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 0.1rem;
+    padding: 0;
 }
 
 .activePage {
