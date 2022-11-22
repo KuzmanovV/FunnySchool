@@ -68,15 +68,7 @@ nav a:hover {
 
 footer {
     text-align: center;
-}
-
-footer button {
-    color: red;
-}
-
-footer button,
-footer input {
-    margin: 10px;
+    font-size: 8px;
 }
 
 .task {
@@ -142,6 +134,8 @@ span {
 .submit {
     height: 4rem;
     width: 10rem;
+    margin: 0.5rem auto;
+    display: block;
     border: 5px solid green;
     border-radius: 15px;
 }
@@ -151,16 +145,13 @@ input:hover {
     border-radius: 10px;
 }
 
-.restart:hover {
-    background-color: rgb(34, 236, 34);
-    border-radius: 10px;
-}
-
 .mistake {
     color: red;
     background-color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: none;
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .start:hover {
@@ -171,9 +162,11 @@ input:hover {
 .restart {
     margin-left: auto;
     margin-right: auto;
+    color: red;
     display: block;
 }
 
-.developed {
-    font-size: 8px;
+.restart:hover {
+    background-color: rgb(34, 236, 34);
+    border-radius: 10px;
 }

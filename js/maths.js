@@ -17,8 +17,7 @@ const tickingSound = new Audio('../static/audio/Clock-ticking.mp3');
 const eStartButton = document.querySelector('.start');
 eStartButton.disabled = false;
 eStartButton.addEventListener('click', start);
-function start(ev) {
-  ev.preventDefault();
+function start() {
   eStartButton.disabled = true;
   setInterval(incrementSeconds, 1000);
   {
