@@ -1,9 +1,9 @@
-h1{
+h1 {
     font-size: 45px;
     color: rgb(142, 92, 1);
 }
 
-img{
+img {
     max-height: 50px;
 }
 
@@ -12,11 +12,11 @@ nav a {
     text-decoration: none;
 }
 
-.active{
+.active {
     color: aqua;
 }
 
-em{
+em {
     color:rgb(142, 92, 1);
     font-weight: 900;
     margin: 50px;

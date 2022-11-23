@@ -10,7 +10,7 @@ function incrementSeconds() {
 function sound(audioFile) {
   const audio = new Audio(audioFile);
   audio.play();
-  audio.volume = 0.01;
+  audio.volume = 0.03;
 }
 
 const tickingSound = new Audio('../static/audio/Clock-ticking.mp3');
@@ -25,7 +25,6 @@ function start() {
     tickingSound.volume = 0.05;
     tickingSound.play();
   }
-
   let rowsNumber = document.querySelector('.controlInput').value;
   for (let i = 0; i < rowsNumber; i++) {
     let oper = '+';
@@ -35,15 +34,20 @@ function start() {
       oper = '+';
     }
     document.querySelector('.tasks').appendChild(row(oper));
-
-    let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
-    let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
-
-    let minNumber = Number(document.querySelector('.minNumInput').value);
-    let maxNumber = Number(document.querySelector('.maxNumInput').value);
-    eFirstNumber.value = utils.getRandomInt(minNumber, maxNumber);
-    eSecondNumber.value = utils.getRandomInt(minNumber, maxNumber);
-    if(i==0){
+    {
+      let minNumber = Number(document.querySelector('.minNumInput').value);
+      let maxNumber = Number(document.querySelector('.maxNumInput').value);
+      let first = utils.getRandomInt(minNumber, maxNumber);
+      let second = utils.getRandomInt(minNumber, maxNumber);
+      if (first < second && (i + 1) % 2 == 0) {
+        [first, second] = [second, first];
+      }
+      let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+      let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+      eFirstNumber.value = first;
+      eSecondNumber.value = second;
+    }
+    if (i == 0) {
       document.querySelector('.result').focus();
     }
   }
@@ -112,7 +116,7 @@ function submit() {
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');
-    sound('../static/audio/WrongClakson.mp3');
+    sound('../static/audio/zip.mp3');
   }
 }
 

@@ -1,8 +1,12 @@
 body {
-    background-color: rgb(95, 172, 95);
     font-family: sans-serif;
+    background-color: rgb(95, 172, 95);
     border: 1rem solid orange;
     border-radius: 13px;
+}
+
+h1 {
+    color: green;
 }
 
 img {
@@ -19,6 +23,23 @@ header div {
     border-radius: 13px;
 }
 
+.explanationText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 60%;
+    gap: 1px;
+}
+
+span {
+    color: blue;
+}
+
+.explanationText p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
 ul {
     list-style: none;
     display: flex;
@@ -32,10 +53,6 @@ ul {
     text-decoration: none;
 }
 
-#programLink:hover {
-    color: blue;
-}
-
 nav a {
     color: grey;
     text-decoration: none;
@@ -43,6 +60,36 @@ nav a {
 
 nav a:hover {
     color: blue;
+}
+
+.timer {
+    color: white;
+}
+
+.controls {
+    background-image: linear-gradient(rgb(95, 172, 95), rgb(162, 255, 0));
+    text-align: center;
+    padding: 1rem;
+}
+
+.control {
+    max-width: 3rem;
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+input:hover {
+    background-color: rgb(34, 236, 34);
+    border-radius: 10px;
+}
+
+.start{
+    margin-left: 1.5rem;
+}
+
+.start:hover {
+    border: 5px solid green;
+    border-radius: 5px;
 }
 
 .taskField {
@@ -56,67 +103,17 @@ nav a:hover {
     background-color: azure;
 }
 
-.result {
-    width: 4rem;
-}
-
-.controls {
-    background-image: linear-gradient(rgb(95, 172, 95), rgb(162, 255, 0));
-    text-align: center;
-    padding: 1rem;
-}
-
-footer {
-    text-align: center;
-    font-size: 8px;
-}
-
 .task {
     display: flex;
     justify-content: center;
 }
 
-.wrongWarning {
-    font-weight: 900;
-    display: none
-}
-
-.explanationText {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    font-size: 60%;
-    gap: 1px;
-}
-
-.explanationText p {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-}
-
-h1 {
-    color: green;
-}
-
-.controlOutput {
-    text-align: right;
-}
-
-.control {
-    max-width: 3rem;
-    text-align: right;
-    margin-bottom: 0.5rem;
-}
-
 label {
     color: green;
-
 }
 
-.timer {
-    margin-bottom: 0.5rem;
-    color: white;
+.result {
+    width: 4rem;
 }
 
 button,
@@ -125,10 +122,6 @@ button,
     cursor: pointer;
     color: blue;
     font-weight: bold;
-}
-
-span {
-    color: blue;
 }
 
 .submit {
@@ -140,11 +133,6 @@ span {
     border-radius: 15px;
 }
 
-input:hover {
-    background-color: rgb(34, 236, 34);
-    border-radius: 10px;
-}
-
 .mistake {
     color: red;
     background-color: #fff;
@@ -152,11 +140,6 @@ input:hover {
     display: none;
     text-align: center;
     padding: 0.5rem;
-}
-
-.start:hover {
-    border: 5px solid green;
-    border-radius: 5px;
 }
 
 .restart {
@@ -169,4 +152,9 @@ input:hover {
 .restart:hover {
     background-color: rgb(34, 236, 34);
     border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 8px;
 }

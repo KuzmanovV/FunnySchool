@@ -12,15 +12,15 @@ nav a {
     text-decoration: none;
 }
 
-th {
-    text-align: left;
-}
-
 table {
     background: rgb(202, 242, 3);
     margin: auto;
     border-spacing: 15px 0;
     color: green;
+}
+
+th {
+    text-align: left;
 }
 
 tr:nth-Child(2) td {
