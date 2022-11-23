@@ -34,7 +34,6 @@ function start() {
     } else {
       oper = '+';
     }
-
     document.querySelector('.tasks').appendChild(row(oper));
 
     let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
@@ -44,6 +43,9 @@ function start() {
     let maxNumber = Number(document.querySelector('.maxNumInput').value);
     eFirstNumber.value = utils.getRandomInt(minNumber, maxNumber);
     eSecondNumber.value = utils.getRandomInt(minNumber, maxNumber);
+    if(i==0){
+      document.querySelector('.result').focus();
+    }
   }
 }
 
