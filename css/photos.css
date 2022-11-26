@@ -3,31 +3,22 @@ h1 {
     color: rgb(142, 92, 1);
 }
 
-img {
+.maxImg {
     max-height: 50px;
 }
 
 nav a {
     color: grey;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-audio{
-    background-color: green;
-    max-height: 2rem;
-    border: 10px solid green;
-    border-radius: 15px;
+.box-1{
+    color: antiquewhite;
+    font-size: 10px;
 }
 
-label{
-    font-size: 2rem;
-    color: greenyellow;
-    margin-right: 2rem;
-}
-
-.song{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.img-fluid:hover{
+border-radius: 10px;
+border: 1px solid antiquewhite ;
 }
 

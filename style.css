@@ -9,7 +9,7 @@ h1 {
     color: green;
 }
 
-img {
+.maxImg {
     max-height: 120px;
     border-radius: 13px;
 }
