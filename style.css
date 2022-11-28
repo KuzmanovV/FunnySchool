@@ -70,6 +70,7 @@ nav a:hover {
     background-image: linear-gradient(rgb(95, 172, 95), rgb(162, 255, 0));
     text-align: center;
     padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .control {

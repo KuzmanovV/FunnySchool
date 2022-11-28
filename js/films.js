@@ -1,5 +1,5 @@
 import {html} from '../node_modules/lit-html/lit-html.js';
-import renderFunction from './moduls/renderFunction.js';
+import {renderMultimedia} from './moduls/renderFunctions.js';
 
 const filmTemplate = (data) => html`
 <div class="film">
@@ -8,5 +8,5 @@ const filmTemplate = (data) => html`
         </a>
       </div>`;
 
-renderFunction('.films', '../data/films.json', filmTemplate);
+renderMultimedia('.films', '../data/films.json', filmTemplate);
 
