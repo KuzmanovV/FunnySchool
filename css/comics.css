@@ -1,0 +1,33 @@
+h1 {
+    font-size: 15px;
+    color: rgb(142, 92, 1);
+}
+
+img {
+    max-height: 50px;
+}
+
+nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+label{
+    font-size: 2rem;
+    color: greenyellow;
+    margin-right: 2rem;
+}
+
+audio{
+    background-color: green;
+    max-height: 2rem;
+    border: 10px solid green;
+    border-radius: 15px;
+}
+
+.song{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,5 +1,4 @@
-import { render } from '../../node_modules/lit-html/lit-html.js';
-import { html } from '../../node_modules/lit-html/lit-html.js';
+import { render, html } from '../../node_modules/lit-html/lit-html.js';
 
 async function renderMultimedia(placeClass, dataWay, mediaTemplate) {
   const place = document.querySelector(placeClass);
@@ -9,12 +8,12 @@ async function renderMultimedia(placeClass, dataWay, mediaTemplate) {
 }
 
 const footerTemplate = html`<footer>
-<p>
-  &copy; All rights reserved
-  <a class="developed" href="https://github.com/KuzmanovV">
-    Developed by V. Kuzmanov
-  </a>
-</p>
+  <p>
+    &copy; All rights reserved
+    <a class="developed" href="https://github.com/KuzmanovV">
+      Developed by V. Kuzmanov
+    </a>
+  </p>
 </footer>`;
 
 export { renderMultimedia, footerTemplate };
