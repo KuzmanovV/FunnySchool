@@ -1,5 +1,7 @@
 import * as utils from './moduls/utils.js';
 import row from './moduls/rowMaker.js';
+import {render} from '../node_modules/lit-html/lit-html.js';
+import {footerTemplate} from './moduls/renderFunctions.js';
 
 let seconds = 0;
 let eTimer = document.querySelector('.timer p');
@@ -109,7 +111,7 @@ function submit() {
         .setAttribute('href', './html/songs.html');
       document
         .querySelector('ul :nth-child(4) a')
-        .setAttribute('href', './html/films.html');
+        .setAttribute('href', './html/cartoons.html');
       document
         .querySelector('ul :nth-child(5) a')
         .setAttribute('href', './html/404.html');
@@ -125,3 +127,5 @@ sound('../static/audio/tap.mp3');
 function restart() {
   location.reload();
 }
+
+render(footerTemplate, document.body);
