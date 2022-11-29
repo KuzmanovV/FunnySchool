@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Първа - 1979 г.",
+        "book": "../data/comics/books/01.jpg",
+        "play": "../html/comicsPlay1.html"
+    },
+    {
+        "title": "Втора - 1980 г.",
+        "book": "../data/comics/books/02.jpg",
+        "play": "../html/comicsPlay2.html"
+    },
+    {
+        "title": "Втора - 1980 г.",
+        "book": "../data/comics/books/01.jpg",
+        "play": "../html/comicsPlay2.html"
+    }
+]
