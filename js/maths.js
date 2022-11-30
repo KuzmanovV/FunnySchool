@@ -1,8 +1,8 @@
 import * as utils from './moduls/utils.js';
 import row from './moduls/rowMaker.js';
 import toggleMenu from './moduls/headerAnim.js';
-import {render} from '../node_modules/lit-html/lit-html.js';
-import {footerTemplate} from './moduls/renderFunctions.js';
+import { render } from '../node_modules/lit-html/lit-html.js';
+import { footerTemplate } from './moduls/renderFunctions.js';
 
 toggleMenu();
 
@@ -12,7 +12,6 @@ function incrementSeconds() {
   seconds += 1;
   eTimer.innerText = 'You are solving for ' + seconds + ' seconds.';
 }
-
 
 const tickingSound = new Audio('../static/audio/Clock-ticking.mp3');
 const eStartButton = document.querySelector('.start');
@@ -34,20 +33,26 @@ function start() {
     } else {
       oper = '+';
     }
-    document.querySelector('.tasks').appendChild(row(oper));
-    {
-      let minNumber = Number(document.querySelector('.minNumInput').value);
-      let maxNumber = Number(document.querySelector('.maxNumInput').value);
-      let first = utils.getRandomInt(minNumber, maxNumber);
-      let second = utils.getRandomInt(minNumber, maxNumber);
-      if (first < second && (i + 1) % 2 == 0) {
-        [first, second] = [second, first];
-      }
-      let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
-      let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
-      eFirstNumber.value = first;
-      eSecondNumber.value = second;
+
+    let complexityInput = document.querySelector('.complexityInput').value;
+    if (complexityInput == 'normal') {
+      document.querySelector('.tasks').appendChild(row(oper));
+    } else {
+      //to be implemented mixed complexity tasks generation!
     }
+
+    let minNumber = Number(document.querySelector('.minNumInput').value);
+    let maxNumber = Number(document.querySelector('.maxNumInput').value);
+    let first = utils.getRandomInt(minNumber, maxNumber);
+    let second = utils.getRandomInt(minNumber, maxNumber);
+    if (first < second && (i + 1) % 2 == 0) {
+      [first, second] = [second, first];
+    }
+    let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+    let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+    eFirstNumber.value = first;
+    eSecondNumber.value = second;
+
     if (i == 0) {
       document.querySelector('.result').focus();
     }

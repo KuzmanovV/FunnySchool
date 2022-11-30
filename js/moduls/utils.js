@@ -25,5 +25,5 @@ function getRandomInt(min, max) {
 export{
     getRandomInt,
     el,
-    sound
+    sound,
 }
