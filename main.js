@@ -1,8 +1,8 @@
-import * as utils from './moduls/utils.js';
-import row from './moduls/rowMaker.js';
-import toggleMenu from './moduls/headerAnim.js';
-import { render } from '../node_modules/lit-html/lit-html.js';
-import { footerTemplate } from './moduls/renderFunctions.js';
+import * as utils from './js/moduls/utils.js';
+import row from './js/moduls/rowMaker.js';
+import toggleMenu from './js/moduls/headerAnim.js';
+import {render} from '../node_modules/lit-html/lit-html.js';
+import { footerTemplate } from './js/moduls/renderFunctions.js';
 
 toggleMenu();
 
