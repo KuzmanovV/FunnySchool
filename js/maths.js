@@ -12,11 +12,7 @@ function incrementSeconds() {
   seconds += 1;
   eTimer.innerText = 'You are solving for ' + seconds + ' seconds.';
 }
-function sound(audioFile) {
-  const audio = new Audio(audioFile);
-  audio.play();
-  audio.volume = 0.03;
-}
+
 
 const tickingSound = new Audio('../static/audio/Clock-ticking.mp3');
 const eStartButton = document.querySelector('.start');
@@ -26,7 +22,7 @@ function start() {
   eStartButton.disabled = true;
   setInterval(incrementSeconds, 1000);
   {
-    sound('../static/audio/tap.mp3');
+    utils.sound('../static/audio/tap.mp3');
     tickingSound.volume = 0.05;
     tickingSound.play();
   }
@@ -60,7 +56,7 @@ function start() {
 
 document.querySelector('.submit').addEventListener('click', submit);
 function submit() {
-  sound('../static/audio/tap.mp3');
+  utils.sound('../static/audio/tap.mp3');
   let correctFlag = true;
   let rowsNumber = document.querySelector('.controlInput').value;
 
@@ -85,7 +81,7 @@ function submit() {
   }
   if (correctFlag) {
     tickingSound.pause();
-    sound('../static/audio/success.mp3');
+    utils.sound('../static/audio/success.mp3');
     eTimer.remove();
     document.querySelector('.mistake').remove();
     for (let i = 0; i < rowsNumber; i++) {
@@ -121,12 +117,12 @@ function submit() {
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');
-    sound('../static/audio/zip.mp3');
+    utils.sound('../static/audio/zip.mp3');
   }
 }
 
 document.querySelector('.restart').addEventListener('click', restart);
-sound('../static/audio/tap.mp3');
+utils.sound('../static/audio/tap.mp3');
 function restart() {
   location.reload();
 }
