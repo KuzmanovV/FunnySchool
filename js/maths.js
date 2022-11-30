@@ -1,7 +1,10 @@
 import * as utils from './moduls/utils.js';
 import row from './moduls/rowMaker.js';
+import toggleMenu from './moduls/headerAnim.js';
 import {render} from '../node_modules/lit-html/lit-html.js';
 import {footerTemplate} from './moduls/renderFunctions.js';
+
+toggleMenu();
 
 let seconds = 0;
 let eTimer = document.querySelector('.timer p');
@@ -105,7 +108,7 @@ function submit() {
       });
       document
         .querySelector('ul :nth-child(1) a')
-        .setAttribute('href', './html/404.html');
+        .setAttribute('href', './html/photos.html');
       document
         .querySelector('ul :nth-child(2) a')
         .setAttribute('href', './html/songs.html');
@@ -114,7 +117,7 @@ function submit() {
         .setAttribute('href', './html/cartoons.html');
       document
         .querySelector('ul :nth-child(5) a')
-        .setAttribute('href', './html/404.html');
+        .setAttribute('href', './html/comics.html');
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');

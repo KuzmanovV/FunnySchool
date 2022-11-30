@@ -1,17 +1,22 @@
 [
     {
-        "title": "Първа - 1979 г.",
+        "title": "Дъга бр. 1 - 1979 г.",
         "book": "../data/comics/books/01.jpg",
         "play": "../html/comicsPlay1.html"
     },
     {
-        "title": "Втора - 1980 г.",
+        "title": "Дъга бр. 2 - 1980 г.",
         "book": "../data/comics/books/02.jpg",
-        "play": "../html/comicsPlay2.html"
+        "play": "../html/404.html"
     },
     {
-        "title": "Втора - 1980 г.",
-        "book": "../data/comics/books/01.jpg",
-        "play": "../html/comicsPlay2.html"
+        "title": "Дъга бр. 4 - 1981 г.",
+        "book": "../data/comics/books/04.jpg",
+        "play": "../html/404.html"
+    },
+    {
+        "title": "Чуден Свят бр. 1 - 1980 г.",
+        "book": "../data/comics/books/CS.png",
+        "play": "../data/comics/books/CS.pdf"
     }
 ]
