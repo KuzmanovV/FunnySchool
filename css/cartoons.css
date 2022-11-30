@@ -5,7 +5,7 @@ h1 {
     font-weight: 500;
 }
 
-img {
+.maxImg,img {
     max-height: 50px;
 }
 

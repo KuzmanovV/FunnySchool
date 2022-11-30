@@ -1,5 +1,8 @@
 import {html, render} from '../node_modules/lit-html/lit-html.js';
-import {renderMultimedia, footerTemplate} from './moduls/renderFunctions.js';
+import {renderMultimedia, footerTemplate, headerTemplate} from './moduls/renderFunctions.js';
+import toggleMenu from './moduls/headerAnim.js';
+
+toggleMenu();
 
 const songTemplate = (data) => html`
 <div class="song">
@@ -12,7 +15,7 @@ const songTemplate = (data) => html`
         </audio>
       </div>`;
 
-
+render(headerTemplate('SONGS'), document.querySelector('header'));
 renderMultimedia('.songs', '../data/songs.json', songTemplate);
 render(footerTemplate, document.body);
 

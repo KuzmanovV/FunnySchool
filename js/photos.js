@@ -1,5 +1,5 @@
 import {html, render} from '../node_modules/lit-html/lit-html.js';
-import {renderMultimedia, footerTemplate} from './moduls/renderFunctions.js';
+import {renderMultimedia, footerTemplate, headerTemplate} from './moduls/renderFunctions.js';
 import toggleMenu from './moduls/headerAnim.js';
 
 toggleMenu();
@@ -10,6 +10,7 @@ const photoTemplate = (data) => html`
                                 <p class="photoName">${data.title}</p>
                           </a>`;
 
+render(headerTemplate('PHOTOS'), document.querySelector('header'));
 renderMultimedia('.row', '../data/photos.json', photoTemplate);
 render(footerTemplate, document.body);
 

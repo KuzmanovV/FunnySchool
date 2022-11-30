@@ -1,5 +1,8 @@
 import {html, render} from '../node_modules/lit-html/lit-html.js';
-import {renderMultimedia, footerTemplate} from './moduls/renderFunctions.js';
+import {renderMultimedia, footerTemplate, headerTemplate} from './moduls/renderFunctions.js';
+import toggleMenu from './moduls/headerAnim.js';
+
+toggleMenu();
 
 const filmTemplate = (data) => html`
 <div class="film">
@@ -8,5 +11,6 @@ const filmTemplate = (data) => html`
         </a>
       </div>`;
 
+render(headerTemplate('CARTOONS'), document.querySelector('header'));
 renderMultimedia('.films', '../data/films.json', filmTemplate);
 render(footerTemplate, document.body);

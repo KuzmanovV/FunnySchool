@@ -16,4 +16,23 @@ const footerTemplate = html`<footer>
   </p>
 </footer>`;
 
-export { renderMultimedia, footerTemplate };
+const headerTemplate = (multimediaTitle) => html`
+      <div>
+        <img class="maxImg" src="../static/img/Max.jpg" alt="MaxsImg" />
+        <div class="explanationText">
+          <h1>Max's ${multimediaTitle}</h1>
+          <button class="headerHide">hide menu</button>
+        </div>
+        <img class="maxImg" src="../static/img/Max.jpg" alt="MaxsImg" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Photos</a></li>
+          <li><a href="../index.html">Songs</a></li>
+          <li><a class="activePage" href="../index.html">Maths</a></li>
+          <li><a href="../index.html">Cartoons</a></li>
+          <li><a href="../index.html">Comics</a></li>
+        </ul>
+      </nav>`
+
+export { renderMultimedia, footerTemplate, headerTemplate };

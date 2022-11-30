@@ -5,58 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funny School</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/comics.js" type="module"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../css/comics.css" />
-        <link
-      rel="icon"
-      type="image/x-icon"
-      href="../static/img/pencil.png"
-    />
+    <link rel="icon" type="image/x-icon" href="../static/img/pencil.png" />
   </head>
   <body>
-    <header>
-      <div>
-        <img class="maxImg" src="../static/img/Max.jpg" alt="MaxsImg" />
-        <div class="explanationText">
-          <h1>Max's COMICS</h1>
-        </div>
-        <img class="maxImg" src="../static/img/Max.jpg" alt="MaxsImg" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Photos</a></li>
-          <li><a href="../index.html">Songs</a></li>
-          <li><a class="activePage" href="../index.html">Maths</a></li>
-          <li><a href="../index.html">Cartoons</a></li>
-          <li><a href="../index.html">Comics</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header></header>
     <main>
+      <button class="headerShow">show menu</button>
       <div class="controls"></div>
       <div class="songs">
-          <div class="container">
-                  <div class="col-md-12 col-12">
-                      <div class="row">
-                      </div>
-                  </div>
+        <div class="container">
+          <div class="col-md-12 col-12">
+            <div class="row"></div>
           </div>
+        </div>
       </div>
     </main>
     <footer></footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
     <script>
-      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-          event.preventDefault();
-          $(this).ekkoLightbox();
+      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
       });
-  </script>
+    </script>
   </body>
 </html>
