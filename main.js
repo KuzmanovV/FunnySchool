@@ -1,7 +1,7 @@
 import * as utils from './js/moduls/utils.js';
-import row from './js/moduls/rowMaker.js';
+import { row, rowMixed1, rowMixed2, rowTriple } from './js/moduls/rowMaker.js';
 import toggleMenu from './js/moduls/headerAnim.js';
-import {render} from '../node_modules/lit-html/lit-html.js';
+import { render } from '../node_modules/lit-html/lit-html.js';
 import { footerTemplate } from './js/moduls/renderFunctions.js';
 
 toggleMenu();
@@ -34,27 +34,62 @@ function start() {
       oper = '+';
     }
 
+    const tasksPlace = document.querySelector('.tasks');
     let complexityInput = document.querySelector('.complexityInput').value;
-    if (complexityInput == 'normal') {
-      document.querySelector('.tasks').appendChild(row(oper));
-    } else {
-      //to be implemented mixed complexity tasks generation!
-    }
-
     let minNumber = Number(document.querySelector('.minNumInput').value);
     let maxNumber = Number(document.querySelector('.maxNumInput').value);
-    let first = utils.getRandomInt(minNumber, maxNumber);
-    let second = utils.getRandomInt(minNumber, maxNumber);
-    if (first < second && (i + 1) % 2 == 0) {
-      [first, second] = [second, first];
+    let firstValue = utils.getRandomInt(minNumber, maxNumber);
+    let secondValue = utils.getRandomInt(minNumber, maxNumber);
+    if (
+      (firstValue < secondValue && (i + 1) % 2 == 0) ||
+      (firstValue > secondValue && i % 2 == 0)
+    ) {
+      [firstValue, secondValue] = [secondValue, firstValue];
     }
-    let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
-    let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
-    eFirstNumber.value = first;
-    eSecondNumber.value = second;
+
+    if (complexityInput == 'normal') {
+      tasksPlace.appendChild(row(oper));
+      let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+      let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+      eFirstNumber.value = firstValue;
+      eSecondNumber.value = secondValue;
+    } else if (complexityInput == 'mixed') {
+      if (i % 3 == 0) {
+        tasksPlace.appendChild(rowMixed1(oper));
+        let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+        let eResult = document.querySelectorAll('.result')[i];
+        eSecondNumber.value = firstValue;
+        eResult.value = secondValue;
+      } else if ((i - 1) % 3 == 0) {
+        tasksPlace.appendChild(rowMixed2(oper));
+        let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+        let eResult = document.querySelectorAll('.result')[i];
+        eFirstNumber.value = firstValue;
+        eResult.value = secondValue;
+      } else if ((i - 2) % 3 == 0) {
+        tasksPlace.appendChild(row(oper));
+        let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+        let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+        eFirstNumber.value = firstValue;
+        eSecondNumber.value = secondValue;
+      }
+    } else if (complexityInput == 'triple') {
+      tasksPlace.appendChild(rowTriple(oper));
+      let zeroValue = utils.getRandomInt(minNumber, maxNumber);
+      let eZeroNumber = document.querySelectorAll('.zeroNumber')[i];
+      let eFirstNumber = document.querySelectorAll('.firstNumber')[i];
+      let eSecondNumber = document.querySelectorAll('.secondNumber')[i];
+      eZeroNumber.value = zeroValue;
+      eFirstNumber.value = firstValue;
+      eSecondNumber.value = secondValue;
+    }
 
     if (i == 0) {
-      document.querySelector('.result').focus();
+      if (complexityInput == 'mixed') {
+        document.querySelector('.firstNumber').focus();
+      } else {
+        document.querySelector('.result').focus();
+      }
     }
   }
 }
