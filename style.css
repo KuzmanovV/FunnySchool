@@ -187,6 +187,10 @@ footer {
     display: none;
 }
 
+.indexMenu{
+    border: none;
+}
+
 .submit{
     display: none;
 }

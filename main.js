@@ -18,6 +18,12 @@ const eStartButton = document.querySelector('.start');
 eStartButton.addEventListener('click', start);
 function start(event) {
   event.preventDefault();
+  document.querySelector('.complexityInput').setAttribute('disabled','');
+  document.querySelector('.minNumInput').setAttribute('disabled','');
+  document.querySelector('.maxNumInput').setAttribute('disabled','');
+  document.querySelector('.controlInput').setAttribute('disabled','');
+  document.querySelector('.joker1').setAttribute('disabled','');
+  document.querySelector('.joker2').setAttribute('disabled','');
   eStartButton.style.setProperty('display', 'none');
   document.querySelector('.submit').style.setProperty('display', 'block');
   setInterval(incrementSeconds, 1000);
@@ -102,6 +108,12 @@ function submit() {
   let rowsNumber = document.querySelector('.controlInput').value;
 
   for (let i = 0; i < rowsNumber; i++) {
+    let zeroNumber = 0;
+    if (document.querySelectorAll('.zeroNumber')[i]) {
+      zeroNumber = Number(
+        document.querySelectorAll('.zeroNumber')[i].value
+      );
+    }
     let firstNumber = Number(
       document.querySelectorAll('.firstNumber')[i].value
     );
@@ -111,11 +123,11 @@ function submit() {
     let result = Number(document.querySelectorAll('.result')[i].value);
 
     if ((i + 1) % 2 != 0) {
-      if (firstNumber + secondNumber != result) {
+      if (zeroNumber + firstNumber + secondNumber != result) {
         correctFlag = false;
       }
     } else {
-      if (firstNumber - secondNumber != result) {
+      if (zeroNumber + firstNumber - secondNumber != result) {
         correctFlag = false;
       }
     }
