@@ -186,3 +186,7 @@ footer {
     font-weight: bold;
     display: none;
 }
+
+.submit{
+    display: none;
+}

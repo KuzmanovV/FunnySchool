@@ -15,10 +15,11 @@ function incrementSeconds() {
 
 const tickingSound = new Audio('../static/audio/Clock-ticking.mp3');
 const eStartButton = document.querySelector('.start');
-eStartButton.disabled = false;
 eStartButton.addEventListener('click', start);
-function start() {
-  eStartButton.disabled = true;
+function start(event) {
+  event.preventDefault();
+  eStartButton.style.setProperty('display', 'none');
+  document.querySelector('.submit').style.setProperty('display', 'block');
   setInterval(incrementSeconds, 1000);
   {
     utils.sound('../static/audio/tap.mp3');
