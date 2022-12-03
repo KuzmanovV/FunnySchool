@@ -22,8 +22,7 @@ function start(event) {
   document.querySelector('.minNumInput').setAttribute('disabled','');
   document.querySelector('.maxNumInput').setAttribute('disabled','');
   document.querySelector('.controlInput').setAttribute('disabled','');
-  document.querySelector('.joker1').setAttribute('disabled','');
-  document.querySelector('.joker2').setAttribute('disabled','');
+  document.querySelector('.joker').setAttribute('disabled','');
   eStartButton.style.setProperty('display', 'none');
   document.querySelector('.submit').style.setProperty('display', 'block');
   setInterval(incrementSeconds, 1000);
@@ -167,6 +166,9 @@ function submit() {
       document
         .querySelector('ul :nth-child(5) a')
         .setAttribute('href', './html/comics.html');
+    }
+    {
+      localStorage.setItem(`seconds ${'1'}`, seconds);
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');

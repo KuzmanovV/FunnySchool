@@ -37,7 +37,7 @@
           <li><a href="./html/photos.html">Photos</a></li>
           <li><a href="./html/songs.html">Songs</a></li>
           <li><a class="activePage" href="./html/day.html">Day</a></li>
-          <li><a class="activePage" href="./html/404.html">Board</a></li>
+          <li><a class="activePage" href="./html/board.html">Board</a></li>
           <li><a href="./html/cartoons.html">Cartoons</a></li>
           <li><a href="./html/comics.html">Comics</a></li>
         </ul>
@@ -50,21 +50,23 @@
           <p>Your timer will appear here...</p>
         </div>
         <form>
-          <label>Complexity</label>
+          <label>Complexity:</label>
           <select class="complexityInput control" type="drop-down">
             <option value="normal">normal</option>
             <option value="mixed">mixed</option>
             <option value="triple">triple</option>
           </select>
-          <label>Min number?</label>
+          <label>Min number:</label>
           <input class="minNumInput control" type="number" value="0" />
-          <label>Max number?</label>
+          <label>Max number:</label>
           <input class="maxNumInput control" type="number" value="10" />
-          <label>Number of rows?</label>
+          <label>Number of rows:</label>
           <input class="controlInput control" type="number" value="4" />
-          <label>Joker</label>
-          <input class="joker1 control" type="checkbox" />
-          <input class="joker2 control" type="checkbox" disabled/>
+          <label>Joker:</label>
+          <input class="joker control" name="joker" type="radio" />
+          <label>50%</label>
+          <input class="joker control" name="joker" type="radio" />
+          <label>100%</label>
           <button class="start">START</button>
         </form>
       </div>

@@ -89,13 +89,19 @@ input:hover {
     border-radius: 10px;
 }
 
+.joker:hover{
+    width: 10px;
+    background-color: green;
+}
+
 select:hover {
     background-color: rgb(34, 236, 34);
     border-radius: 10px;
 }
 
-.start {
-    margin-left: 1.5rem;
+.start{
+    display: block;
+    margin: auto;
 }
 
 .start:hover {

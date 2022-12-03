@@ -1,0 +1,46 @@
+h1 {
+    font-size: 15px;
+    color: rgb(142, 92, 1);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.maxImg {
+    max-height: 50px;
+}
+
+nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.table{
+    color: green;
+    background: rgb(202, 242, 3);
+    text-align: center;
+}
+
+.complexity {
+    background-color: rgb(34, 236, 34);
+    border-radius: 10px;
+    text-align: center;
+    width: 4rem;
+}
+
+.control{
+    min-width: 17rem;
+    height: 1.5rem;
+}
+
+.tablesRules{
+    text-align: center;
+}
+
+span{
+    color:rgb(202, 242, 3);
+}
+
+.datetime{
+    display: flex;
+    justify-content: space-around;
+}
