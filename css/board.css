@@ -44,3 +44,16 @@ span{
     display: flex;
     justify-content: space-around;
 }
+
+.delete{
+    border: 2px solid green;
+    height: 1.5rem;
+    width: 4rem;
+    color: brown;
+    font-weight: 100;
+    text-align: center;
+}
+
+.delete:hover{
+cursor: pointer;
+}

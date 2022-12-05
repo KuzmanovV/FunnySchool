@@ -3,6 +3,7 @@ import { row, rowMixed1, rowMixed2, rowTriple } from './js/moduls/rowMaker.js';
 import toggleMenu from './js/moduls/headerAnim.js';
 import { render } from '../node_modules/lit-html/lit-html.js';
 import { footerTemplate } from './js/moduls/renderFunctions.js';
+import {today, time} from './js/moduls/clock.js';
 
 toggleMenu();
 
@@ -22,7 +23,8 @@ function start(event) {
   document.querySelector('.minNumInput').setAttribute('disabled', '');
   document.querySelector('.maxNumInput').setAttribute('disabled', '');
   document.querySelector('.controlInput').setAttribute('disabled', '');
-  document.querySelector('.joker').setAttribute('disabled', '');
+  document.querySelector('.joker50').setAttribute('disabled', '');
+  document.querySelector('.joker100').setAttribute('disabled', '');
   eStartButton.style.setProperty('display', 'none');
   document.querySelector('.submit').style.setProperty('display', 'block');
   setInterval(incrementSeconds, 1000);
@@ -165,14 +167,14 @@ function submit() {
         .querySelector('ul :nth-child(6) a')
         .setAttribute('href', './html/comics.html');
     }
-    {
-      const today = new Date();
-      let h = today.getHours();
-      let m = today.getMinutes();
-      let s = today.getSeconds();
+    
+    const minNumberInput = document.querySelector('.minNumInput').value;
+    const maxNumberInput = document.querySelector('.maxNumInput').value;
+    const inputRowsNumber = document.querySelector('.controlInput').value;
+    if (minNumberInput == 0 && maxNumberInput == 10 && inputRowsNumber == 2) {
       let newRecord = {
         date: today.toLocaleDateString('en-GB'), 
-        time: `${h}:${m}:${s}`,
+        time: time,
         record: seconds
       };
       let recordsArr = JSON.parse(localStorage.recordsArr); 
