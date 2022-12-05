@@ -18,11 +18,11 @@ const eStartButton = document.querySelector('.start');
 eStartButton.addEventListener('click', start);
 function start(event) {
   event.preventDefault();
-  document.querySelector('.complexityInput').setAttribute('disabled','');
-  document.querySelector('.minNumInput').setAttribute('disabled','');
-  document.querySelector('.maxNumInput').setAttribute('disabled','');
-  document.querySelector('.controlInput').setAttribute('disabled','');
-  document.querySelector('.joker').setAttribute('disabled','');
+  document.querySelector('.complexityInput').setAttribute('disabled', '');
+  document.querySelector('.minNumInput').setAttribute('disabled', '');
+  document.querySelector('.maxNumInput').setAttribute('disabled', '');
+  document.querySelector('.controlInput').setAttribute('disabled', '');
+  document.querySelector('.joker').setAttribute('disabled', '');
   eStartButton.style.setProperty('display', 'none');
   document.querySelector('.submit').style.setProperty('display', 'block');
   setInterval(incrementSeconds, 1000);
@@ -109,9 +109,7 @@ function submit() {
   for (let i = 0; i < rowsNumber; i++) {
     let zeroNumber = 0;
     if (document.querySelectorAll('.zeroNumber')[i]) {
-      zeroNumber = Number(
-        document.querySelectorAll('.zeroNumber')[i].value
-      );
+      zeroNumber = Number(document.querySelectorAll('.zeroNumber')[i].value);
     }
     let firstNumber = Number(
       document.querySelectorAll('.firstNumber')[i].value
@@ -168,7 +166,19 @@ function submit() {
         .setAttribute('href', './html/comics.html');
     }
     {
-      localStorage.setItem(`seconds ${'1'}`, seconds);
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      let newRecord = {
+        date: today.toLocaleDateString('en-GB'), 
+        time: `${h} + ":" + ${m} + ":" + ${s}`,
+        record: seconds
+      };
+      let recordsArr = JSON.parse(localStorage.recordsArr); 
+      recordsArr.push(newRecord);
+      localStorage.clear();
+      localStorage.recordsArr = JSON.stringify(recordsArr);
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');
