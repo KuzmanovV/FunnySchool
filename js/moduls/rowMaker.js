@@ -2,7 +2,7 @@ import {el} from './utils.js';
 
 function row(oper) {
     const row = el(
-      "div",
+      'div',
       { className: 'task' },
       el('input', {
         className: 'firstNumber taskField',

@@ -159,10 +159,10 @@ function submit() {
         .querySelector('ul :nth-child(2) a')
         .setAttribute('href', './html/songs.html');
       document
-        .querySelector('ul :nth-child(4) a')
+        .querySelector('ul :nth-child(5) a')
         .setAttribute('href', './html/cartoons.html');
       document
-        .querySelector('ul :nth-child(5) a')
+        .querySelector('ul :nth-child(6) a')
         .setAttribute('href', './html/comics.html');
     }
     {
@@ -172,7 +172,7 @@ function submit() {
       let s = today.getSeconds();
       let newRecord = {
         date: today.toLocaleDateString('en-GB'), 
-        time: `${h} + ":" + ${m} + ":" + ${s}`,
+        time: `${h}:${m}:${s}`,
         record: seconds
       };
       let recordsArr = JSON.parse(localStorage.recordsArr); 
