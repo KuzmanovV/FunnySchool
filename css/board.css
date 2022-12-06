@@ -9,8 +9,7 @@ h1 {
     max-height: 50px;
 }
 
-nav a {
-    color: grey;
+nav a:hover{
     text-decoration: none;
 }
 

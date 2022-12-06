@@ -89,9 +89,8 @@ input:hover {
     border-radius: 10px;
 }
 
-.joker:hover{
+.hint:hover{
     width: 10px;
-    background-color: green;
 }
 
 select:hover {

@@ -7,9 +7,8 @@ import { el } from './moduls/utils.js';
 toggleMenu();
 
 render(headerTemplate('RECORDS board'), document.querySelector('header'));
-document.querySelector('.date').innerText = new Date().toLocaleDateString(
-  'en-GB'
-);
+let dateElement = document.querySelector('.date').innerText;
+dateElement = new Date().toLocaleDateString('en-GB');
 (function waitForElement() {
   if (typeof clock() !== 'undefined') {
     document.querySelector('.time').innerText = clock();
@@ -34,11 +33,10 @@ const recordRow = (date, time, record) => html`
 `;
 
 let recordsArr = JSON.parse(localStorage.recordsArr);
-
-let lastRecordObject = recordsArr[recordsArr.length-1];
+let lastRecordObject = recordsArr[recordsArr.length - 1];
 lastRecordObject.lastFlag = true;
 
-recordsArr.sort((a,b)=>a.record-b.record);
+recordsArr.sort((a, b) => a.record - b.record);
 
 recordsArr.forEach((record) => {
   let lastFlag = '';
