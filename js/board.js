@@ -34,10 +34,20 @@ const recordRow = (date, time, record) => html`
 `;
 
 let recordsArr = JSON.parse(localStorage.recordsArr);
+
+let lastRecordObject = recordsArr[recordsArr.length-1];
+lastRecordObject.lastFlag = true;
+
+recordsArr.sort((a,b)=>a.record-b.record);
+
 recordsArr.forEach((record) => {
+  let lastFlag = '';
+  if (record.lastFlag) {
+    lastFlag = 'markLast';
+  }
   recordCountN++;
   const trElement = el('tr', {
-    className: `tr${recordCountN}`,
+    className: `tr${recordCountN} ${lastFlag}`,
   });
   document.querySelector('.normalTable').appendChild(trElement);
   render(

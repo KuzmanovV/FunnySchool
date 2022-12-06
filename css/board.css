@@ -57,3 +57,7 @@ span{
 .delete:hover{
 cursor: pointer;
 }
+
+.markLast{
+background-color: aqua !important;
+}
