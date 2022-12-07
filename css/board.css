@@ -60,3 +60,12 @@ cursor: pointer;
 .markLast{
 background-color: aqua !important;
 }
+
+.confirmation{
+    display: none;
+}
+
+.confirmation label{
+    color: brown;
+
+}

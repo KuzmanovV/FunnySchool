@@ -16,21 +16,23 @@ document.querySelector('.date').innerText = new Date().toLocaleDateString('en-GB
   }
 })();
 
-document.querySelector('.delNormal').addEventListener('click', delRecordsNormal);
+document.querySelector('.forConfirmationNormal').addEventListener('click', confirmDelNormal);
 document.querySelector('.delMixed').addEventListener('click', delRecordsMixed);
 document.querySelector('.delTripple').addEventListener('click', delRecordsTriple);
+function confirmDelNormal() {
+  document.querySelector('.forConfirmationNormal').setAttribute('disabled', '');
+  document.querySelector('.confirmation').style.setProperty('display', 'block');
+}
+document.querySelector('.delNormal').addEventListener('click', delRecordsNormal);
 function delRecordsNormal() {
-  // localStorage.removeItem(recordsArrNormal);
   localStorage.setItem('recordsArrNormal', JSON.stringify([]));
   location.reload();
 }
 function delRecordsMixed() {
-  // localStorage.removeItem(recordsArrMixed);
   localStorage.setItem('recordsArrMixed', JSON.stringify([]));
   location.reload();
 }
 function delRecordsTriple() {
-  // localStorage.removeItem(recordsArrTriple);
   localStorage.setItem('recordsArrTriple', JSON.stringify([]));
   location.reload();
 }
