@@ -168,6 +168,7 @@ function submit() {
         .setAttribute('href', './html/comics.html');
     }
 
+    const complexityInput = document.querySelector('.complexityInput').value;
     const minNumberInput = document.querySelector('.minNumInput').value;
     const maxNumberInput = document.querySelector('.maxNumInput').value;
     const inputRowsNumber = document.querySelector('.controlInput').value;
@@ -180,21 +181,35 @@ function submit() {
       hint50 != true &&
       hint100 != true
     ) {
-      if (condition) {
-      }
       let newRecord = {
         date: today.toLocaleDateString('en-GB'),
         time: time,
         record: seconds,
       };
-      let recordsArr = JSON.parse(localStorage.recordsArr);
-      recordsArr.push(newRecord);
-      localStorage.clear();
-      localStorage.recordsArr = JSON.stringify(recordsArr);
+      if (complexityInput == 'normal') {
+        let recordsArrNormal = JSON.parse(localStorage.recordsArrNormal);
+        recordsArrNormal.push(newRecord);
+        localStorage.removeItem(recordsArrNormal);
+        localStorage.recordsArrNormal = JSON.stringify(recordsArrNormal);
+      } else if (complexityInput == 'mixed') {
+        let recordsArrMixed = JSON.parse(localStorage.recordsArrMixed);
+        recordsArrMixed.push(newRecord);
+        localStorage.removeItem(recordsArrMixed);
+        localStorage.recordsArrMixed = JSON.stringify(recordsArrMixed);
+      } else if (complexityInput == 'triple') {
+        let recordsArrTriple = JSON.parse(localStorage.recordsArrTriple);
+        recordsArrTriple.push(newRecord);
+        localStorage.removeItem(recordsArrTriple);
+        localStorage.recordsArrTriple = JSON.stringify(recordsArrTriple);
+      }
     }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');
     utils.sound('../static/audio/zip.mp3');
+
+    if (hint50 == true) {
+    
+    }
   }
 }
 
