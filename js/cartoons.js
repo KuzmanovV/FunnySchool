@@ -4,7 +4,7 @@ import toggleMenu from './moduls/headerAnim.js';
 
 toggleMenu();
 
-const filmTemplate = (data) => html`
+const cartoonTemplate = (data) => html`
 <div class="film">
         <a href=${data.uLink}>${data.title}
         <img class="snap" src=${data.filmImg} alt="a snapshot from the movie" />
@@ -12,5 +12,5 @@ const filmTemplate = (data) => html`
       </div>`;
 
 render(headerTemplate('CARTOONS'), document.querySelector('header'));
-renderMultimedia('.films', '../data/films.json', filmTemplate);
+renderMultimedia('.cartoons', '../data/cartoons.json', cartoonTemplate);
 render(footerTemplate, document.body);

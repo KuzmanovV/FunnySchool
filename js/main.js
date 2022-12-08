@@ -1,9 +1,9 @@
-import * as utils from './js/moduls/utils.js';
-import { row, rowMixed1, rowMixed2, rowTriple } from './js/moduls/rowMaker.js';
-import toggleMenu from './js/moduls/headerAnim.js';
+import * as utils from './moduls/utils.js';
+import { row, rowMixed1, rowMixed2, rowTriple } from './moduls/rowMaker.js';
+import toggleMenu from './moduls/headerAnim.js';
 import { render } from '../node_modules/lit-html/lit-html.js';
-import { footerTemplate } from './js/moduls/renderFunctions.js';
-import { today, time } from './js/moduls/clock.js';
+import { footerTemplate } from './moduls/renderFunctions.js';
+import { today, time } from './moduls/clock.js';
 
 toggleMenu();
 
@@ -178,13 +178,13 @@ function submit() {
         .setAttribute('href', './html/comics.html');
     }
 
-    if (
-      minNumberInput == 0 &&
-      maxNumberInput == 10 &&
-      inputRowsNumber == 2 &&
-      hint50 != true &&
-      hint100 != true
-    ) {
+    // if (
+    //   minNumberInput == 0 &&
+    //   maxNumberInput == 10 &&
+    //   inputRowsNumber == 6 &&
+    //   hint50 != true &&
+    //   hint100 != true
+    // ) {
       let newRecord = {
         date: today.toLocaleDateString('en-GB'),
         time: time,
@@ -206,7 +206,7 @@ function submit() {
         localStorage.removeItem(recordsArrTriple);
         localStorage.recordsArrTriple = JSON.stringify(recordsArrTriple);
       }
-    }
+    // }
   } else {
     document.querySelector('.mistake').style.setProperty('display', 'block');
     utils.sound('../static/audio/zip.mp3');

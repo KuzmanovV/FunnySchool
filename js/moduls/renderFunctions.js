@@ -29,7 +29,9 @@ const headerTemplate = (multimediaTitle) => html`
         <ul>
           <li><a href="../index.html">Photos</a></li>
           <li><a href="../index.html">Songs</a></li>
+          <li><a class="activePage" href="../html/day.html">Day</a></li>
           <li><a class="activePage" href="../index.html">Maths</a></li>
+          <li><a class="activePage" href="../html/board.html">Board</a></li>
           <li><a href="../index.html">Cartoons</a></li>
           <li><a href="../index.html">Comics</a></li>
         </ul>
