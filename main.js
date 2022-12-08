@@ -107,6 +107,7 @@ function submit() {
   utils.sound('../static/audio/tap.mp3');
   let correctFlag = true;
   let rowsNumber = document.querySelector('.controlInput').value;
+  let hintFlag = 0;
 
   for (let i = 0; i < rowsNumber; i++) {
     let zeroNumber = 0;
@@ -124,13 +125,22 @@ function submit() {
     if ((i + 1) % 2 != 0) {
       if (zeroNumber + firstNumber + secondNumber != result) {
         correctFlag = false;
+        hintFlag = i;
       }
     } else {
       if (zeroNumber + firstNumber - secondNumber != result) {
         correctFlag = false;
+        hintFlag = i;
       }
     }
   }
+
+  const complexityInput = document.querySelector('.complexityInput').value;
+  const minNumberInput = document.querySelector('.minNumInput').value;
+  const maxNumberInput = document.querySelector('.maxNumInput').value;
+  const inputRowsNumber = document.querySelector('.controlInput').value;
+  const hint50 = document.querySelector('.hint50').checked;
+  const hint100 = document.querySelector('.hint100').checked;
   if (correctFlag) {
     tickingSound.pause();
     utils.sound('../static/audio/success.mp3');
@@ -168,12 +178,6 @@ function submit() {
         .setAttribute('href', './html/comics.html');
     }
 
-    const complexityInput = document.querySelector('.complexityInput').value;
-    const minNumberInput = document.querySelector('.minNumInput').value;
-    const maxNumberInput = document.querySelector('.maxNumInput').value;
-    const inputRowsNumber = document.querySelector('.controlInput').value;
-    const hint50 = document.querySelector('.hint50').checked;
-    const hint100 = document.querySelector('.hint100').checked;
     if (
       minNumberInput == 0 &&
       maxNumberInput == 10 &&
@@ -207,8 +211,24 @@ function submit() {
     document.querySelector('.mistake').style.setProperty('display', 'block');
     utils.sound('../static/audio/zip.mp3');
 
-    if (hint50 == true) {
-    
+    if (hint100) {
+      for (let i = 0; i < rowsNumber; i++) {
+        document.querySelectorAll('.task')[i].classList.remove('wrongTask');
+      }
+      document.querySelectorAll('.task')[hintFlag].classList.add('wrongTask');
+    } else if (hint50) {
+      for (let i = 0; i < rowsNumber; i++) {
+        document.querySelectorAll('.task')[i].classList.remove('correctTask');
+      }
+      if (hintFlag % 2 == 0) {
+        for (let i = 1; i < rowsNumber; i += 2) {
+          document.querySelectorAll('.task')[i].classList.add('correctTask');
+        }
+      } else {
+        for (let i = 0; i < rowsNumber; i += 2) {
+          document.querySelectorAll('.task')[i].classList.add('correctTask');
+        }
+      }
     }
   }
 }

@@ -45,9 +45,7 @@ span{
 }
 
 .delete{
-    border: 2px solid green;
-    height: 1.5rem;
-    width: 4rem;
+    border: 1px solid green;
     color: brown;
     font-weight: 100;
     text-align: center;
@@ -61,11 +59,10 @@ cursor: pointer;
 background-color: aqua !important;
 }
 
-.confirmation{
+.confirmationNormal, .confirmationMixed, .confirmationTriple{
     display: none;
 }
 
 .confirmation label{
     color: brown;
-
 }

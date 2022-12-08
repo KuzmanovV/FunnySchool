@@ -67,6 +67,10 @@ nav a:hover {
     color: white;
 }
 
+.timer p{
+    margin-top: 0.2rem;
+}
+
 .controls {
     background-image: linear-gradient(rgb(95, 172, 95), rgb(162, 255, 0));
     text-align: center;
@@ -198,4 +202,12 @@ footer {
 
 .submit{
     display: none;
+}
+
+.wrongTask input{
+    color: red;
+}
+
+.correctTask input{
+    background-color: green;
 }

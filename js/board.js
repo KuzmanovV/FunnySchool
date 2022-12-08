@@ -16,24 +16,54 @@ document.querySelector('.date').innerText = new Date().toLocaleDateString('en-GB
   }
 })();
 
-document.querySelector('.forConfirmationNormal').addEventListener('click', confirmDelNormal);
-document.querySelector('.delMixed').addEventListener('click', delRecordsMixed);
-document.querySelector('.delTripple').addEventListener('click', delRecordsTriple);
-function confirmDelNormal() {
-  document.querySelector('.forConfirmationNormal').setAttribute('disabled', '');
-  document.querySelector('.confirmation').style.setProperty('display', 'block');
-}
+const eDeleteNormal = document.querySelector('.forConfirmationNormal');
+eDeleteNormal.addEventListener('click', confirmDelNormal);
 document.querySelector('.delNormal').addEventListener('click', delRecordsNormal);
+document.querySelector('.noDelNormal').addEventListener('click', noDelNormal);
+function confirmDelNormal() {
+  eDeleteNormal.setAttribute('disabled', '');
+  document.querySelector('.confirmationNormal').style.setProperty('display', 'block');
+}
 function delRecordsNormal() {
   localStorage.setItem('recordsArrNormal', JSON.stringify([]));
   location.reload();
+}
+function noDelNormal() {
+  document.querySelector('.noDelNormal').setAttribute('disabled', '');
+  location.reload();
+}
+
+const eDeleteMixed = document.querySelector('.forConfirmationMixed');
+eDeleteMixed.addEventListener('click', confirmDelMixed);
+document.querySelector('.delMixed').addEventListener('click', delRecordsMixed);
+document.querySelector('.noDelMixed').addEventListener('click', noDelMixed);
+function confirmDelMixed() {
+  eDeleteMixed.setAttribute('disabled', '');
+  document.querySelector('.confirmationMixed').style.setProperty('display', 'block');
 }
 function delRecordsMixed() {
   localStorage.setItem('recordsArrMixed', JSON.stringify([]));
   location.reload();
 }
+function noDelMixed() {
+  document.querySelector('.noDelMixed').setAttribute('disabled', '');
+  location.reload();
+}
+
+const eDeleteTriple = document.querySelector('.forConfirmationTriple');
+eDeleteTriple.addEventListener('click', confirmDelTriple);
+document.querySelector('.delTriple').addEventListener('click', delRecordsTriple);
+document.querySelector('.noDelTriple').addEventListener('click', noDelTriple);
+function confirmDelTriple() {
+  eDeleteTriple.setAttribute('disabled', '');
+  document.querySelector('.confirmationTriple').style.setProperty('display', 'block');
+}
 function delRecordsTriple() {
   localStorage.setItem('recordsArrTriple', JSON.stringify([]));
+  location.reload();
+}
+function noDelTriple() {
+  document.querySelector('.noDelTriple').setAttribute('disabled', '');
   location.reload();
 }
 
