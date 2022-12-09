@@ -1,6 +1,6 @@
 import {render} from '../node_modules/lit-html/lit-html.js';
-import {footerTemplate, headerTemplate} from './moduls/renderFunctions.js';
-import toggleMenu from './moduls/headerAnim.js';
+import {footerTemplate, headerTemplate} from './modules/renderFunctions.js';
+import toggleMenu from './modules/headerAnim.js';
 
 toggleMenu();
 let dayIndex = new Date().getDay();

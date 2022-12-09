@@ -1,9 +1,9 @@
-import * as utils from './moduls/utils.js';
-import { row, rowMixed1, rowMixed2, rowTriple } from './moduls/rowMaker.js';
-import toggleMenu from './moduls/headerAnim.js';
+import * as utils from './modules/utils.js';
+import { row, rowMixed1, rowMixed2, rowTriple } from './modules/rowMaker.js';
+import toggleMenu from './modules/headerAnim.js';
 import { render } from '../node_modules/lit-html/lit-html.js';
-import { footerTemplate } from './moduls/renderFunctions.js';
-import { today, time } from './moduls/clock.js';
+import { footerTemplate } from './modules/renderFunctions.js';
+import { today, time } from './modules/clock.js';
 
 toggleMenu();
 

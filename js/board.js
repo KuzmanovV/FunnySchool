@@ -1,8 +1,8 @@
 import { render, html } from '../node_modules/lit-html/lit-html.js';
-import { footerTemplate, headerTemplate } from './moduls/renderFunctions.js';
-import toggleMenu from './moduls/headerAnim.js';
-import { clock } from './moduls/clock.js';
-import { el } from './moduls/utils.js';
+import { footerTemplate, headerTemplate } from './modules/renderFunctions.js';
+import toggleMenu from './modules/headerAnim.js';
+import { clock } from './modules/clock.js';
+import { el } from './modules/utils.js';
 
 toggleMenu();
 
