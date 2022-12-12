@@ -1,5 +1,5 @@
 # FunnySchool
-An app for my son to practice arithmetic like a funny play and to use the pc not only for gaming.
+An app for my son to practice arithmetic like a funny play and to use the pc not only for gaming. It is intended to be also an introduction for the boy to the apps as a main part of the user computer world.
 A simple multipage app with several pages made with JS, HTML and CSS. Some lit-HTML is included with simulation of db using JSON files. There are also effects with jquery 3.3.1, bootstrap 4.0.0 and ekko-lightbox 5.3.0 included.
 
 You can run it locally using live server.
