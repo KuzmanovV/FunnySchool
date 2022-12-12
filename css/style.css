@@ -129,6 +129,10 @@ select:hover {
 }
 
 label {
+    color: green;
+}
+
+.board{
     color: rgb(180, 232, 180);
 
 }
