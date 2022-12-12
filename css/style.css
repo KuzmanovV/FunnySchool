@@ -28,7 +28,7 @@ header div {
     flex-direction: column;
     text-align: center;
     color: white;
-    font-size: 60%;
+    font-size: 85%;
     gap: 1px;
 }
 
@@ -129,7 +129,8 @@ select:hover {
 }
 
 label {
-    color: green;
+    color: rgb(180, 232, 180);
+
 }
 
 .result {
